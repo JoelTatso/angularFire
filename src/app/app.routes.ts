@@ -3,14 +3,18 @@ import { Routes } from '@angular/router';
 const appName = 'leMarche Admin'
 
 export const routes: Routes = [
+
   {
     path:'connexion',title:`Se connecter | ${appName}`, loadComponent: () => import('./components/auth/login.component')
   },
+
   {
     path:'enregistrement', title:`S'enregister | ${appName}`, loadComponent: () => import('./components/auth/register.component')
   },
+
   {
     path:'', title:`Dashboard ${appName}`, loadComponent: () => import('./components/dashboard/dashboard.component'),
+
     children:
      [
           {
